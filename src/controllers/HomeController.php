@@ -6,7 +6,20 @@ use \core\Controller;
 class HomeController extends Controller {
 
     public function index() {
-        $this->render('home', ['nome' => 'Bonieky']);
+        $nome = "Roberto";
+        $idade = 90;
+        $posts = [
+            ['titulo'=>'Título de teste1', 'corpo' => 'Corpo de teste1'],
+            ['titulo'=>'Título de teste2', 'corpo' => 'Corpo de teste2'],
+            ['titulo'=>'Título de teste3', 'corpo' => 'Corpo de teste3'],
+            ['titulo'=>'Título de teste4', 'corpo' => 'Corpo de teste4'],
+            ['titulo'=>'Título de teste5', 'corpo' => 'Corpo de teste5'],
+        ];
+        $this->render('home',[
+            'nome' => $nome,
+            'idade' => $idade,
+            'posts' => $posts
+        ]);
     }
 
     public function fotos(){
