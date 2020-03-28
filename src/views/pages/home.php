@@ -15,8 +15,8 @@
            <td><?=$usuario['nome'];?> 
            <td><?=$usuario['email'];?>
            <td>
-               <a href="<?=$base;?>/usuario/<?=$usuario['id']?>/editar">[ editar ]</a>
-               <a href="<?=$base;?>/usuario/<?=$usuario['id']?>/excluir">[ excluir ]</a>
+               <a href="<?=$base;?>/usuario/<?=$usuario['id'];?>/editar">[ editar ]</a>
+               <a href="<?=$base;?>/usuario/<?=$usuario['id'];?>/excluir" onclick="return confirm('Tem certeza que deseja excluir?')" >[ excluir ]</a>
            </td> 
         </tr>
     <?php endforeach;?>
